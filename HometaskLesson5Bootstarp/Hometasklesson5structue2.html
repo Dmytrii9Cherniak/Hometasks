@@ -6,75 +6,94 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
+
         .header{
-            background-color: rgb(15, 213, 248);
-            height: 150px;
+            background-color: blue;
+            height: 200px;
         }
 
         .block1{
-            background-color: hotpink;
+            background-color: violet;
+            height: 200px;
         }
 
         .block2{
-            background-color: greenyellow;
-            height: 350px;
+            background-color: yellowgreen;
+            height: 300px;
         }
 
         .block3{
             background-color: gold;
-            height: 400px;
+            height: 300px;
         }
 
-        .block4{
+        .block4{    
             background-color: gray;
+            height: 200px;
         }
 
         .green{
             background-color: green;
-            height: 175px;
+            height: 200px;
         }
 
         .violet{
             background-color: violet;
-            height: 175px;
+            height: 200px;
         }
 
         .footer{
             background-color: orange;
-            height: 150px;
+            height: 200px;
         }
-        
+
+        .col-xl-4 .col-xl-8{
+            padding: 0 !important;
+        }
+
+        .height1{
+            height: 500px;
+            padding: 0;
+        }
+
     </style>
 </head>
 <body>
  
     <div class="container-fluid">
+        <div class="row">
+            <div class="header w-100"></div>
+        </div>
+
+        <div>
             <div class="row">
-                <div class="header w-100"></div>
+                <div class="hero-sidebar col-xl-4 height1">
+                    <div class="block1"></div>
+                    <div class="block2"></div>
+                </div>
+                <div class="content-e-content col-xl-8 height1">
+                    <div class="block3"></div>
+                    <div class="block4"></div>
+                </div>
             </div>
-
-                    <div class="row">
-                        
-                            <div class="block1 w-25"></div>
-                            <div class="block2 w-75"></div>
-                            <div class="block3 w-25"></div>
-                            <div class="block4 w-75"></div>
-                    </div>            
-
-
+        </div>
+        
+        <sector-2>
             <div class="row">
                 <div class="green w-75"></div>
-                <div class="violet w-25"></div>        
+                <div class="violet w-25"></div>
             </div>
-
-            <div class="row">
-                <div class="footer w-100"></div>
-            </div>
-     </div>
+        </sector-2>
+        
+        <div class="row">
+            <div class="footer w-100"></div>
+        </div>
+    </div>
+</div>
 
 
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
- 
+
 </body>
 </html>

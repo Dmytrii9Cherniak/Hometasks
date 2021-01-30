@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+header{
+    height: 70px;
+    width: 100%;
+    display: flex;
+}
+
+.first-part{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 38px;
+    margin-left: 205px;
+    font-family: Open Sans;
+}
+
+a{
+    text-decoration: none;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 24px;
+    margin-left: 520px;
+    text-decoration: none;
+    margin-right: 205px;
+}
+
+.image{
+    height: 670px;
+}
+
+.text{
+    margin-top: 90px;
+    text-align: center;
+    font-family: Playfair Display;
+}
+
+.text1{
+    position: absolute;
+    top: 539px;
+    left: 580px;
+    text-align: center;
+    font-size: 350%;
+    font-family: Playfair Display;
+}
+
+.threeblocks{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    align-items: center;
+    height: 100%;
+    margin-top: 30px;
+}
+
+.Marokko{
+    background-image: url(1.png);
+    width: 342px;
+    height: 157px;
+}
+
+.Kamboja{
+    background-image: url(2.png);
+    width: 342px;
+    height: 157px;
+}
+
+.Turkey{
+    background-image: url(3.png);
+    width: 342px;
+    height: 157px;
+}
+
+.threeblocks2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+
+.text2{
+    font-family: Playfair Display;
+}
+
+.threeblocks3{
+    display: flex;
+    justify-content: space-around;
+}
+
+.description{
+    width: 296px;
+    height: 266px;
+    border-left: 3px orange;
+    font-family: Open Sans;
+    margin-bottom: 60px;
+}
+
+footer{
+    background-color: #16595A;
+    height: 90px;
+    margin-top: 30px;
+}

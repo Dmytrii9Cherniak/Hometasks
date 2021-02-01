@@ -1,0 +1,49 @@
+@media screen and (max-width: 500px){
+
+    header{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        }
+
+    .all{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .first-part {
+        padding: 0 22px;
+        position: relative;
+        display: flex;
+        display: none;
+    }
+
+    .social-media{
+        display: flex;
+        margin-left: 150px;
+    }
+
+    .cities{
+        display: block;
+        flex-direction: column;
+        margin-left: 11px;
+    }
+
+    .button{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 200px;
+    }
+
+    .image{
+        height: 230px;
+        width: 375px;
+    }
+
+    .places{
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px;
+    }
+}

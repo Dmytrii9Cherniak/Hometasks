@@ -19,6 +19,10 @@
         console.log(b);
         console.log(c);
 
+        alert(a);
+        alert(b);
+        alert(c);
+
         document.write(a + '<br>');
         document.write(b + '<br>');
         document.write(c + '<br>');
@@ -34,6 +38,10 @@
         console.log(a);
         console.log(b);
         console.log(c);
+
+        alert(a);
+        alert(b);
+        alert(c);
 
         document.write(a +'<br>');
         document.write(b +'<br>');
@@ -55,6 +63,18 @@
     console.log(w);   
     console.log(r);  
 
+    console.log(e);   
+    console.log(t);   
+    console.log(y);
+    
+    alter(q);
+    alter(w);
+    alter(r);
+
+    alter(e);
+    alter(t);
+    alter(y);
+
     console.log('-------------------');
 
     // 4 - при помощи 3х разных prompt() получить 3 слова которые являются вашими ФИО. Для фамилии имени и отчества создать разные переменные. Вывести каждую при помощи console.log , alert, document.write
@@ -67,18 +87,18 @@
     console.log (qe);
     console.log (qr);
 
-    document.write(qw);
-    document.write(qe);
-    document.write(qr);
+    document.write(qw + '<br>');
+    document.write(qe + '<br>');
+    document.write(qr + '<br>');
 
     console.log('-------------------');
 
     // 5 - Взять переменные из задания 4 и сконкатенировать их в одной переменной person.
 
-    let result = 
+    let person = 
       ` ${qw}  ${qe}  ${qr}`
 
-        console.log(result)
+        console.log(person);
    
     console.log('-------------------');
     // 6 - Взять задние 4 и 5 и применить его к ФИО всех членов своей семьи.
@@ -94,9 +114,9 @@
     console.log('-------------------');
     // 7 - при помощи prompt() получить 3 числа. Привести их к числовому типу при помощи +. вывести их в консоль.
 
-    let rd = +prompt(9);
-    let wd = +prompt(10);
-    let dd = +prompt(11);
+    let rd = +prompt('Type digit');
+    let wd = +prompt('Type digit');
+    let dd = +prompt('Type digit');
     
     console.log(rd);
     console.log(wd);
@@ -105,41 +125,60 @@
     console.log('-------------------');
     // 8 - при помощи prompt() получить 4 числа. Привести их к числовому типу при помощи parseInt. Сложить их между собой записав результат в переменную result и вывести в консоль браузера
 
-    let lf = prompt('2+2*2');
-    let parseInt1 = parseInt(13);
+    let lf = +prompt('Number 1');
+    let lg = +prompt('Number 2');
+    let gn = +prompt('Number 3');
+    let nb = +prompt('Number 4');
+    
+    let rslt = parseInt(lf + lg + gn + nb);
+    console.log(rslt);
     
     console.log('-------------------');
+
     // 9 - при помощи prompt()  получить 3 числа с плавающей точекой. при помощи parseFloat привести их к соответсвующему типу. Сложить их между собой записав результат в переменную result и вывести в консоль браузера
 
-        let hgh = parseFloat (5.5);
-        let ghg = parseFloat (9.5);
-        let hmh = parseFloat (11.1);
+    let lfg = +prompt('Enter digit 1');
+    let lgl = +prompt('Enter digit 2');
+    let gnl = +prompt('Enter digit 3');
+    let nbl = +prompt('Enter digit 4');
 
-        let resultsum = prompt (hgh + ghg + hmh);
-        document.write(resultsum);
+        let conclusion = parseFloat (lfg + lgl + gnl + nbl);
+        console.log(conclusion);
 
         console.log('-------------------');
         
     // 10 - при помощи prompt()  получить 3 числа с плавающей точекой. Округлить их при помощи Math.round Сложить их между собой записав результат в переменную  и вывести в консоль браузера
 
+    let nmn = +prompt();
+    let mnm = +prompt();
+    let mmn = +prompt();
 
+    console.log(Math.round(nmn + mnm + mmn));
     
+    console.log('-------------------');
+        
     // 11 - при помощи prompt()  получить 2 целых числа. Привести их к целочисленному типу. Первое число - это число которое будут возводить в степень. Второе число - это число которое является степенью. При помощи Math.pow возвести первое число в степень второго числа.
 
+    let digit = prompt();
+    let powdigit = prompt('Number to the power');
+    let rt = Math.pow(digit,powdigit);
+    console.log(rt);
 
-    
+    console.log('-------------------');
+        
     // 12 - При помощи оператора опредеоения типа typeof определить типы следующих переменных и вывести их в консоль let a = 100; let b = '100'; let c = true; let d = undefined;
 
-    let one = 100;
-    let two = '100';
-    let three = true;
-    let four = undefined;
-    console.log(typeof one)
-    console.log(typeof two);
-    console.log(typeof three);
-    console.log(typeof four);
+        let one = 100;
+        let two = '100';
+        let three = true;
+        let four = undefined;
+        console.log(typeof one)
+        console.log(typeof two);
+        console.log(typeof three);
+        console.log(typeof four);
 
     console.log('--------------------');    
+
     // 13 - Поставьте соответствующий оператор в выражениях что бы получился соответсвующий результат,в одинаковых выражениях в задании не использовать два одинаковых оператора, каждое выражение вложить в свою переменную
    
     // 5 ? 6 -> true

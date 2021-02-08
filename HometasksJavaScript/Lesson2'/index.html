@@ -135,12 +135,16 @@ for (let i = 0; i < grey; i++){
     console.log(i);
 }
 
+console.log('--------------------');
+
 //Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
 
 for (let i = 0; i < 10; i++) {
     console.log(' Крок : ', i);
     document.write('Крок :' , i , '<br>' , '<br>');
 }
+
+console.log('--------------------');
 
 //Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
 
@@ -149,6 +153,8 @@ for (let i = 0; i < 100; i++) {
     document.write('Крок :' , i , '<br>' , '<br>');
 }
 
+console.log('--------------------');
+
 //Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
 
 for (let i = 0; i < 100; i=i+2) {
@@ -156,26 +162,65 @@ for (let i = 0; i < 100; i=i+2) {
     document.write('Крок :' , i , '<br>');
 }
 
+console.log('--------------------');
+
 //Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
 
 for (let i = 0; i < 100; i++) {
-    if (i%2 === 2){
-    console.log(' Крок : ', i);
-    document.write('Крок :' , i , '<br>' , '<br>');
+    if (i%2 === 0){
+    console.log(' Парні : ', i);
+    document.write('Парні :' , i , '<br>' , '<br>');
     }
 }
+
+console.log('--------------------');
 
 //Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
 
 for (let i = 0; i < 100; i++) {
     if (i%2 === 1){
-    console.log(' Крок : ', i);
-    document.write('Крок :' , i , '<br>');
+    console.log(' Непарні: ', i);
+    document.write('Непарні :' , i , '<br>');
     }
 }
 
+console.log('--------------------');
+
 //Відтворити роботу годинника, відрахувавши 2 хвилини (2 цикли! 1й - хвилини, 2й - секунди)
+
+const Counter = 59;
+
+let seconds = 0;
+let minutes = 0; 
+    for(let i = 0; i <= 59 && minutes !== 2; i++){
+        console.log('Minutes:', minutes++);
+for (let i = 0; i <= Counter; i++){
+    console.log('Seconds:' , seconds++);
+}
+seconds=0;
+}
+
+console.log('----------------------')
+
 //Відтворити роботу годинника, відрахувавши  2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
+
+const Clocks = 59;
+
+let hrs = 0;
+let mnt = 0;
+let sec = 0;
+
+for ( let i = 0; i<=23 && hrs !==2 && mnt !== 20; i++ ) {
+    console.log('Hours:' , hrs++);
+    for (let i = 0; i<= Clocks && hrs !== 2 && mnt !==20; i++ ){
+        console.log('Minutes',  mnt++);
+        for (let i = 0; i <= Clocks; i++){
+            console.log('Seconds', sec++)
+        }
+        sec = 0;
+    }
+    mnt = 0;
+}
 
     </script>
 </body>

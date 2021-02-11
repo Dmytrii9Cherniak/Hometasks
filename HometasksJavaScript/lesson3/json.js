@@ -12,19 +12,17 @@ fetch('https://api.sampleapis.com/coffee/hot')
     }
 })
 
-
 fetch('https://api.sampleapis.com/coffee/iced')
 .then(Response => Response.json())
-.then(iced => {
-    for ( let i = 0 ; i < 20; i++ ) 
-    document.write(`
-    <div> 
-        <h5> ${iced.title} ${iced.description} </h5>
-    </div>
-    `)
+.then(icedCoffee =>{
+    for (let b = 0; b < 6; b++){
+        const ice = icedCoffee[b];
+        console.log(ice)
+        document.write(`
+        <div> <h2> ${ice.id} ${ice.description} ${ice.ingredients} </h2> </div>
+        `)
+    }
 })
-
-
 
 
 

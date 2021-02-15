@@ -371,35 +371,33 @@
 //     }
 //  }
 
-
-
 // 17 - З масиву users за допомогою циклу витягнути адреси користувачів і записати (скопіювати) їх в інший порожній масив.
 
-let users = [
+// let users = [
 
-{name: 'vasya', age: 31, status: false, address: {city: 'Lviv', country: 'Ukraine', street: 'Shevchenko', houseNumber: 1}},
+// {name: 'vasya', age: 31, status: false, address: {city: 'Lviv', country: 'Ukraine', street: 'Shevchenko', houseNumber: 1}},
 
-{ name: 'petya', age: 30, status: true, address: {city: 'New York', country: 'USA', street: 'East str', houseNumber: 21}}, 
+// { name: 'petya', age: 30, status: true, address: {city: 'New York', country: 'USA', street: 'East str', houseNumber: 21}}, 
 
-{ name: 'kolya', age: 29, status: true, address: {city: 'Budapest', country: 'Hungary', street: 'Kuraku', houseNumber: 78}}, 
+// { name: 'kolya', age: 29, status: true, address: {city: 'Budapest', country: 'Hungary', street: 'Kuraku', houseNumber: 78}}, 
 
-{ name: 'olya', age: 28, status: false, address: {city: 'Prague', country: 'Czech', street: 'Paster', houseNumber: 56} }, 
+// { name: 'olya', age: 28, status: false, address: {city: 'Prague', country: 'Czech', street: 'Paster', houseNumber: 56} }, 
 
-{ name: 'max', age: 30, status: true, address: {city: 'Istanbul', country: 'Turkey', street: 'Mikar', houseNumber: 39} }, 
+// { name: 'max', age: 30, status: true, address: {city: 'Istanbul', country: 'Turkey', street: 'Mikar', houseNumber: 39} }, 
 
-{ name: 'anya', age: 31, status: false, address: {city: 'Rio', country: 'Brasil', street: 'Ronaldi', houseNumber: 5} }, 
+// { name: 'anya', age: 31, status: false, address: {city: 'Rio', country: 'Brasil', street: 'Ronaldi', houseNumber: 5} }, 
 
-{ name: 'oleg', age: 28, status: false, address: {city: 'Montreal', country: 'Canada', street: 'Acusto', houseNumber: 90} }, 
+// { name: 'oleg', age: 28, status: false, address: {city: 'Montreal', country: 'Canada', street: 'Acusto', houseNumber: 90} }, 
 
-{ name: 'andrey', age: 29, status: true, address: {city: 'Quebeck', country: 'Canada', street: 'Binaro', houseNumber: 33} }, 
+// { name: 'andrey', age: 29, status: true, address: {city: 'Quebeck', country: 'Canada', street: 'Binaro', houseNumber: 33} }, 
 
-{ name: 'masha', age: 30, status: true, address: {city: 'Moscow', country: 'Russia', street: 'Gogolia', houseNumber: 1} }, 
+// { name: 'masha', age: 30, status: true, address: {city: 'Moscow', country: 'Russia', street: 'Gogolia', houseNumber: 1} }, 
 
-{ name: 'olya', age: 31, status: false, address: {city: 'Portland', country: 'USA', street: 'Forest str', houseNumber: 4} }, 
+// { name: 'olya', age: 31, status: false, address: {city: 'Portland', country: 'USA', street: 'Forest str', houseNumber: 4} }, 
 
-{ name: 'max', age: 31, status: true, address: {city: 'Cairo', country: 'Egypt', street: 'Seashore', houseNumber: 45} }
+// { name: 'max', age: 31, status: true, address: {city: 'Cairo', country: 'Egypt', street: 'Seashore', houseNumber: 45} }
 
-];
+// ];
 
 // let ArrayTask17 = [];
 // for(let Array of users){
@@ -409,4 +407,86 @@ let users = [
 
 // console.log(ArrayTask17);
 
-// 18 - - За допомоги циклу проітерувати масив users, записати кожного юзера в сівй блок за допомоги document.createElement. Всі данні в одному блоці
+// 18 - За допомоги циклу проітерувати масив users, записати кожного юзера в сівй блок за допомоги document.createElement. Всі данні в одному блоці
+
+// for (let i = 0; i < users.length;i++){
+
+//     let user = users[i];
+//     let div = document.createElement('div');
+
+//     let adresa = '';
+//     for (let adresa1 in user.address){
+//         adresa = adresa + " " + user.address[adresa1];
+//     }
+
+//     div.innerText = `${user.name} ${user.age} ${user.status} ${adresa}`;
+//     document.body.appendChild(div);
+// }
+
+// 19 - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement, розділивши всі властивості по своїм блокам (div>div*4)
+
+// for (let i = 0; i < users.length;i++){
+
+//     let user = users[i];
+//     let div = document.createElement('div');
+//     let h3 = document.createElement('h3');
+//     let p = document.createElement('p');
+
+//     let adresa = '';
+//     for (let adresa1 in user.address){
+//         adresa = adresa + " " + user.address[adresa1];
+//     }
+
+//     h3.innerText = `${user.name} ${user.age} ${user.status}`;
+//     p.innerText = `${adresa}`;
+//     div.appendChild(h3);
+//     div.appendChild(p);
+//     document.body.appendChild(div);
+// }
+
+// 20 - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement, розділивши всі властивості по своїм блокам , блок з адресою зробити окремим блоком, з блоками для кожної властивості
+
+
+// for (let i = 0; i < users.length;i++){
+//     let user = users[i];
+    
+//     let all = document.createElement('div');
+//     let name = document.createElement('h1');
+//     let age = document.createElement('h2');
+//     let status = document.createElement('p');
+//     let address = document.createElement('div');
+
+//     for ( let one in user.address ) {
+//         let two = document.createElement('div');
+//         two.innerHTML = user.address[one];
+//         address.appendChild(two);
+//     }
+
+//     name.innerText = user.name;
+//     age.innerText = user.age;
+//     status.innerText = user.status;
+
+//     all.appendChild(name);
+//     all.appendChild(age);
+//     all.appendChild(status);
+//     all.appendChild(address);
+
+//     document.body.appendChild(all);
+// }
+
+// 21 - Дано 2 масиви з рівною кількістю об'єктів.
+// З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+// Записати цей об'єкт в новий масив
+
+// let usersWithId = [{id: 1, name: 'vasya', age: 31, status: false}, {id: 2, name: 'petya', age: 30, status: true}, {id: 3, name: 'kolya', age: 29, status: true}, {id: 4, name: 'olya', age: 28, status: false},];
+//             let citiesWithId = [{user_id: 3, country: 'USA', city: 'Portland'}, {user_id: 1, country: 'Ukraine', city: 'Ternopil'}, {user_id: 2, country: 'Poland', city: 'Krakow'}, {user_id: 4, country: 'USA', city: 'Miami'},];
+
+// for ( let Array1 of usersWithId ){
+//     for (let Array2 of citiesWithId){
+//         if (Array1.id = Array2.user_id){
+//             Array1.address = Array2;
+//         }
+//     }
+// }
+
+// console.log(usersWithId);

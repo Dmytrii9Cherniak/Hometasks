@@ -255,7 +255,7 @@
 //     }
 // }
 // let tag = '<h1>';
-// tag action = 'HTML предлагает шесть заголовков разного уровня, которые показывают относительную важность секции, расположенной после заголовка. Так, тег <h1> представляет собой наиболее важный заголовок первого уровня, а тег <h6> служит для обозначения заголовка шестого уровня и является наименее значительным. По умолчанию, заголовок первого уровня отображается самым крупным шрифтом жирного начертания, заголовки последующего уровня по размеру меньше. Теги <h1>,...,<h6> относятся к блочным элементам, они всегда начинаются с новой строки, а после них другие элементы отображаются на следующей строке. Кроме того, перед заголовком и после него добавляется пустое пространство.';
+// let action = 'HTML предлагает шесть заголовков разного уровня, которые показывают относительную важность секции, расположенной после заголовка. Так, тег <h1> представляет собой наиболее важный заголовок первого уровня, а тег <h6> служит для обозначения заголовка шестого уровня и является наименее значительным. По умолчанию, заголовок первого уровня отображается самым крупным шрифтом жирного начертания, заголовки последующего уровня по размеру меньше. Теги <h1>,...,<h6> относятся к блочным элементам, они всегда начинаются с новой строки, а после них другие элементы отображаются на следующей строке. Кроме того, перед заголовком и после него добавляется пустое пространство.';
 // let atribut = [
 //     {atribut: 'align', atrubutAction: 'Определяет выравнивание заголовка.'},
 // ]
@@ -360,19 +360,159 @@
 
 
 
-// 3 - Створити об'єкт car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// 3 - Створити об'єкт car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. Додати в об'єкт функції:
 // -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
 // -- info () - яка виводить всю інформацію про автомобіль
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+
+// let car = {
+//     model: 'Passat B8',
+//     manufacturer: 'Germany',
+//     year: 2020,
+//     topspeed: 210,
+//     engine: 1.4,
+//     collaborator: ' Undefined ',
+//     driver: function () {
+//         console.log(`Їдемо з швидкістю ${this.topspeed} на годину`);1
+//     },
+//
+//     info: function (){
+//         console.log(`
+//             model: ${this.model},
+//             manufacturer: ${this.manufacturer},
+//             year: ${this.year} ,
+//             topspeed: ${this.topspeed},
+//             engine: ${this.engine},
+//             collaborator: ${this.collabolator},
+//         `);
+//     },
+//
+//     increaseMaxSpeed: function (newSpeed){
+//         this.topspeed += newSpeed;
+//     },
+//
+//     changeYear: function (newValue) {
+//         this.year = newValue;
+//     },
+//     addDriver: function (driver) {
+//         this.collaborator = driver;
+//     }
+// }
+//
+// car.changeYear(2025);
+// car.increaseMaxSpeed(240);
+// car.driver();
+// car.info();
 
 // =======================================================================================
 
-// 4 - Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
-
+// 4 -  Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 // -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
 // -- info () - яка виводить всю інформацію про автомобіль
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+
+// function car (model, manufacturer, year, topSpeed, engine , shofer) {
+//     this.model = model;
+//     this.manufacturer = manufacturer;
+//     this.year = year;
+//     this.topSpeed = topSpeed;
+//     this.engine = engine;
+//     this.shofer = shofer;
+//
+//     this.driver = function () {
+//         console.log(`Їдемо зі швидкістю ${this.topSpeed} на годину`);
+//     };
+//
+//    this.info = function (){
+//         console.log(`
+//         model: ${this.model};
+//         manufacturer: ${this.manufacturer};
+//         year: ${this.year};
+//         engine: ${this.engine};
+//         shofer: ${this.shofer};
+//         `);
+//     },
+//
+//     this.increaseMaxSpeed = function (newSpeed){
+//             this.topSpeed += newSpeed;
+//     },
+//
+//     this.changeYear = function (newValue){
+//        this.year = newValue;
+//     },
+//
+//        this.addDriver = function (driver){
+//        this.shofer = driver;
+//        }
+// };
+//
+// let result = new car(
+//     'Renault Duster',
+//     'France',
+//     2015,
+//     181,
+//     2.0,
+//     'Sebastian Loeb');
+// result.info();
+// result.driver();
+// result.increaseMaxSpeed()
+
+// =======================================================================================
+
+//  5 - Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+// -- info () - яка виводить всю інформацію про автомобіль
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+
+// class car{
+//     constructor(model,manufacturer,year,topSpeed,engine,shofer) {
+//         this.model = model;
+//         this.manufacturer = manufacturer;
+//         this.year = year;
+//         this.topSpeed = topSpeed;
+//         this.engine = engine;
+//         this.shofer = shofer;
+//     }
+//     driver(){
+//         console.log(`Їдемо зі швидкістю ${this.topSpeed} на годину`)
+//     }
+//     info (){
+//         console.log(`
+//                 model: ${this.model};
+//                 manufacturer: ${this.manufacturer};
+//                 year: ${this.year};
+//                 engine: ${this.engine};
+//                 topSpeed: ${this.topSpeed};
+//                 shofer: ${this.shofer};
+//         `);
+//     }
+//
+//     increaseMaxSpeed (newSpeed) {
+//         this.topSpeed += newSpeed;
+//     }
+//
+//     changeYear (newValue){
+//         this.year = newValue;
+//     }
+//
+//     addDriver(driver){
+//         this.shofer = driver;
+//     }
+// }
+//
+// let task5 = new car(
+//     'Jetta',
+//     'Germany',
+//     '2015',
+//     180,
+//     1.6,
+//     'Jeremy Clarkson',
+//     );
+// task5.info();
+// task5.driver();

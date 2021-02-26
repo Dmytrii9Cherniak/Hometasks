@@ -569,37 +569,37 @@
 // --Сторити об'єкт типу "принц" за допомоги функції конструктора з полями ім'я, вік, туфелька яку він знайшов, та функцію "пошук попелюшки"
 // -- функція повинна приймати масив попелюшок, та шукає ту котра йому підходить
 
-function popeluchka (name,age,footSize) {
-    this.name = name;
-    this.age = age;
-    this.footSize = footSize;
-}
+// function popeluchka (name,age,footSize) {
+//     this.name = name;
+//     this.age = age;
+//     this.footSize = footSize;
+// }
 
-function prince (name,age,shoesSize){
-    this.name = name;
-    this.age = age;
-    this.shoesSize = shoesSize;
+// function prince (name,age,shoesSize){
+//     this.name = name;
+//     this.age = age;
+//     this.shoesSize = shoesSize;
 
-this.findPop = function (array){
-    let find = null;
-    find = array.find(finded => finded.footSize === this.shoesSize);
-    find
-    ?console.log('My polelushka name is ' + find.name):console.log('I did not find my popelushka');
-}
-}
+// this.findPop = function (array){
+//     let find = null;
+//     find = array.find(finded => finded.footSize === this.shoesSize);
+//     find
+//     ?console.log('My polelushka name is ' + find.name):console.log('I did not find my popelushka');
+// }
+// }
 
-let popelushka1 = new popeluchka('Julia' ,18,31);
-let popelushka2 = new popeluchka('Lesia' , 19, 29);
-let popelushka3 = new popeluchka('Diana', 21,30);
-let popelushka4 = new popeluchka('Olexandra',  17, 28);
-let popelushka5 = new popeluchka('Viktoria' , 19,33);
-let popelushka6 = new popeluchka( 'Maria,',21, 34);
-let popelushka7 = new popeluchka('Nadia',23,35);
-let popelushka8 = new popeluchka('Khrystina' , 17, 36);
-let popelushka9 = new popeluchka('Liza', 19,39);
-let popelushka10 =  new popeluchka('Marta', 21,41);
-let allPopeluchka = [popelushka1,popelushka2,popelushka3,popelushka4,popelushka5,popelushka6,popelushka7,popelushka8,popelushka9,popelushka10];
-let prc = new prince('Vasya' , 19, 31);
-prc.findPop(allPopeluchka);
+// let popelushka1 = new popeluchka('Julia' ,18,31);
+// let popelushka2 = new popeluchka('Lesia' , 19, 29);
+// let popelushka3 = new popeluchka('Diana', 21,30);
+// let popelushka4 = new popeluchka('Olexandra',  17, 28);
+// let popelushka5 = new popeluchka('Viktoria' , 19,33);
+// let popelushka6 = new popeluchka( 'Maria,',21, 34);
+// let popelushka7 = new popeluchka('Nadia',23,35);
+// let popelushka8 = new popeluchka('Khrystina' , 17, 36);
+// let popelushka9 = new popeluchka('Liza', 19,39);
+// let popelushka10 =  new popeluchka('Marta', 21,41);
+// let allPopeluchka = [popelushka1,popelushka2,popelushka3,popelushka4,popelushka5,popelushka6,popelushka7,popelushka8,popelushka9,popelushka10];
+// let prc = new prince('Vasya' , 19, 31);
+// prc.findPop(allPopeluchka);
 
 // ==============================================

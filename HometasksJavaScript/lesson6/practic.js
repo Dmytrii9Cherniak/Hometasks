@@ -516,3 +516,56 @@
 //     );
 // task5.info();
 // task5.driver();
+
+//  6  -  створити класс попелюшка з полями ім'я, вік, розмір ноги
+// --Створити 10 попелюшок , покласти їх в масив
+// --Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+// -- за допоиоги циклу знайти яка попелюшка повинна бути з принцом
+// ==============================================
+
+// class popeluchka {
+//     constructor(name, age , sizeFoot) {
+//         this.name = name;
+//         this.age = age;
+//         this.sizeFoot = sizeFoot;
+//     }}
+// class princ extends popeluchka {
+//     constructor(name,age ,sizeFoot  ,shoesSize) {
+//         super(name, age);
+//         this.shoesSize = shoesSize;
+//     }
+//     findPopeluchka(array){
+//         let find = null;
+//         for (let item of array){
+//             if (item.sizeFoot === this.shoesSize){
+//                 find = item;
+//             }
+//         }      if (find){
+//             console.log('My Popeluchka name is '  + find.name );
+//         }else {
+//             console.log('i didint find my popeluchka');
+//         }
+//     }
+// }
+// let popelushka1 = new popeluchka('Julia' ,18,31);
+// let popelushka2 = new popeluchka('Lesia' , 19, 29);
+// let popelushka3 = new popeluchka('Diana', 21,30);
+// let popelushka4 = new popeluchka('Olexandra',  17, 28);
+// let popelushka5 = new popeluchka('Viktoria' , 19,33);
+// let popelushka6 = new popeluchka( 'Maria,',21, 34);
+// let popelushka7 = new popeluchka('Nadia',23,35);
+// let popelushka8 = new popeluchka('Khrystina' , 17, 36);
+// let popelushka9 = new popeluchka('Liza', 19,39);
+// let popelushka10 =  new popeluchka('Marta', 21,41);
+// let allPopeluchka = [popelushka1,popelushka2,popelushka3,popelushka4,popelushka5,popelushka6,popelushka7,popelushka8,popelushka9,popelushka10];
+// let prince = new princ('Vasya' , 19, 21,35);
+// prince.findPopeluchka(allPopeluchka)
+// ==============================================
+
+
+
+//  7  -  створити функцію конструктор попелюшка з полями ім'я, вік, розмір ноги
+// --Створити 10 попелюшок , покласти їх в масив
+// --Сторити об'єкт типу "принц" за допомоги функції конструктора з полями ім'я, вік, туфелька яку він знайшов, та функцію "пошук попелюшки"
+// -- функція повинна приймати масив попелюшок, та шукає ту котра йому підходить
+// ==============================================

@@ -158,7 +158,7 @@ console.log(secondWayBack);*/
 
 // -- наисать функцию калькулятора с 3мя числами и колбеком
 
-// function  kalculator (a,b,c, callback) {
+// function  calculator (a,b,c, callback) {
 //     return callback (a,b,c);
 // }
-// console.log(kalculator(43223342, 525252,2543234,(a,b,c) => ( a * b ) /c  ));
+// console.log(calculator(43223342, 525252,2543234,(a,b,c) => ( a * b ) /c  ));

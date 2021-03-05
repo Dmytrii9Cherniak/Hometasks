@@ -97,7 +97,118 @@
 //     let inputs = document.getElementById('myText');
 //
 // button.onclick = () => {
+//     let text = inputs.value.toLowerCase().replace(/./g, '*');
+//     console.log(text);
 //     if (badWords.includes(inputs.value.toLowerCase())) {
 //         alert('Аяйяй, так говорити не можна');
 //     }
 // };
+
+
+
+
+
+
+
+
+
+// Практичне завдання 05.03.2021 - на  промісах створити свій розпорядок дня
+
+new Promise(resolve => {
+    setTimeout(()=>{
+        resolve('Прокидання о 8:00');
+    },5500)
+})
+
+.then(value => {
+    console.log(value);
+    return new Promise(resolve => {
+        setTimeout(() =>{
+            resolve('Сніданок приблизно в 8:15 - 8:20');
+        },15000)
+    })
+})
+.then(value => {
+    console.log(value);
+    return new Promise(resolve => {
+        setTimeout(()=>{
+            resolve('Відвідування пар університету в залежності від графіку пар (2 години )')
+        },7500)
+    })
+})
+
+.then(value => {
+    console.log(value);
+    return new Promise(resolve => {
+        setTimeout(()=>{
+            resolve('Тренування в залі (Година - 1:30)')
+        },6500)
+    })
+})
+
+.then(value => {
+    console.log(value);
+    return new  Promise(resolve => {
+        setTimeout(()=>{
+            resolve('Повернення додому разом із обідом')
+        },6500)
+    })
+})
+
+.then(value => {
+    console.log(value);
+    return new Promise(resolve => {
+        setTimeout(()=>{
+            resolve('Вивчення матеріалу курсів разом із занотуванням і виконанням дз')
+        },9500)
+    })
+})
+
+.then(value => {
+    console.log(value);
+    return new Promise(resolve => {
+        setTimeout(()=>{
+            resolve ('Відвідування лекцій / практики')
+        }, 7500)
+    })
+})
+
+.then(value => {
+    console.log(value);
+    return new Promise(resolve => {
+        setTimeout(()=>{
+            resolve('Повторення матеріалу')
+        },4500)
+    })
+})
+
+.then(value => {
+    console.log(value);
+    return new Promise(resolve => {
+        setTimeout(()=>{
+            resolve('Вечеря')
+        },5500)
+    })
+})
+
+.then(value => {
+    console.log(value);
+    return new Promise(resolve => {
+        setTimeout(()=>{
+            resolve('Перегляд поєдинків / футбол / снукер')
+        }, 3650)
+    })
+})
+
+.then(value => {
+    console.log(value);
+    return new Promise(resolve => {
+        setTimeout(()=>{
+            resolve('Сон')
+        },1150)
+    })
+})
+
+.then(value => {
+    console.log(value);
+})

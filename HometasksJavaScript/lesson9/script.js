@@ -200,15 +200,13 @@
 //     });
 
 
+function Product (title,price,categories) {
+    this.title = title;
+    this.price = price;
+    this.categories = categories;
+}
 
-
-
-
-
-
-
-
-
+let product = new Product('milk' ,22,{a: 80, b:110})
 
 // // Практичне завдання 05.03.2021 - на  промісах створити свій розпорядок дня
 // new Promise(resolve => {

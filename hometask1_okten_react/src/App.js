@@ -11,15 +11,15 @@ function App() {
         <main className='main'>
           <div className='leftpart'>leftPart</div>
           <div className='center'>
-            <div className='differentproduct'><Products title='title 1' price = {1} description = 'description of product 1'/></div>
-            <div className='differentproduct'><Products title='title 2' price = {2} description = 'description of product 2'/></div>
-            <div className='differentproduct'><Products title='title 3' price = {3} description = 'description of product 3'/></div>
-            <div className='differentproduct'><Products title='title 4' price = {4} description = 'description of product 4'/></div>
-            <div className='differentproduct'><Products title='title 5' price = {5} description = 'description of product 5'/></div>
-            <div className='differentproduct'><Products title='title 6' price = {6} description = 'description of product 6'/></div>
-            <div className='differentproduct'><Products title='title 7' price = {7} description = 'description of product 7'/></div>
-            <div className='differentproduct'><Products title='title 8' price = {8} description = 'description of product 8'/></div>
-            <div className='differentproduct'><Products title='title 9' price = {9} description = 'description of product 9'/></div>
+            <div className='differentproduct'><Products title='title 1' price = {11} description = 'description of product 1'/></div>
+            <div className='differentproduct'><Products title='title 2' price = {22} description = 'description of product 2'/></div>
+            <div className='differentproduct'><Products title='title 3' price = {33} description = 'description of product 3'/></div>
+            <div className='differentproduct'><Products title='title 4' price = {44} description = 'description of product 4'/></div>
+            <div className='differentproduct'><Products title='title 5' price = {55} description = 'description of product 5'/></div>
+            <div className='differentproduct'><Products title='title 6' price = {66} description = 'description of product 6'/></div>
+            <div className='differentproduct'><Products title='title 7' price = {77} description = 'description of product 7'/></div>
+            <div className='differentproduct'><Products title='title 8' price = {88} description = 'description of product 8'/></div>
+            <div className='differentproduct'><Products title='title 9' price = {99} description = 'description of product 9'/></div>
           </div>
           <div className='rightpart'>rightPArt</div>
         </main>

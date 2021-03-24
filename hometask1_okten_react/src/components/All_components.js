@@ -3,7 +3,7 @@ import React from 'react';
 export let Shapka = () => (
     <header className = 'header'>
         <div className='form'>
-            <button className='button' onClick={() => {}}>Натисни на мене</button>
+            <button className='button' onClick={() => {}}>Зареєструватися</button>
             <input className='input' placeholder='login' type = 'text'/>
             <input className='input' placeholder='password' type='password'/>
         </div>

@@ -49,6 +49,19 @@ function App() {
     }
     // Завдання 3
 
+    function restoreElements() {
+
+    }
+
+    function delete1element(){
+        let one = document.getElementById('1')
+        one.remove()
+    }
+
+    function delete2element(){
+        let two = document.getElementById('2')
+        two.remove()
+    }
 
   return (
       <div>
@@ -56,6 +69,15 @@ function App() {
           <button onClick={removeFirstElement}>Delete first element</button>
           <button onClick={removeLastElement}>Delete last element</button>
           <button onClick={onRestore}>Відновити</button>
+
+          <div>
+
+              <button onClick={restoreElements}>Відноивити елементи</button>
+              <ul>
+                  <li id={'1'}>Один</li> <button onClick={delete1element}>Видалити</button>
+                  <li id={'2'}>Два</li><button onClick={delete2element}>Видалити</button>
+              </ul>
+          </div>
       </div>
   );
 }

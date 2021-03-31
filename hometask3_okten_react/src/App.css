@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    flex: 1;
+}
+
+.buttons {
+    flex: 1;
+    height: 50px;
+    color: #008000;
+    text-decoration: none;
+}
+.buttons:visited {
+    color: #800080;
+}
+.buttons:hover {
+    color: #800000;
+}

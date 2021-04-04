@@ -1,0 +1,54 @@
+header{
+    display: flex;
+    column-gap: 35px;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+.different_item{
+    border: 1px solid;
+    border-radius: 6px;
+}
+
+.error{
+    color: red;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:  center;
+    column-gap: 15px;
+    row-gap: 30px;
+}
+
+.different_product{
+    border: 1px solid;
+    border-radius: 6px;
+    width: 215px;
+    text-align: center;
+    height: 150px;
+}
+
+.products{
+    margin-top: 15px;
+}
+
+.different_product{
+    border: 1px solid;
+}
+
+.input[type="text"] {
+    border: 1px solid #cccccc;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-khtml-border-radius: 3px;
+background: #ffffff !important;
+outline: none;
+height: 24px;
+width: 120px;
+color: #cccccc;
+font-size: 11px;
+font-family: Tahoma;
+}

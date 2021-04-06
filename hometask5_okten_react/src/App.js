@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +22,10 @@ export default function App() {
             <button>
                 <Link to="/posts">Posts</Link>
             </button>
+
+              <button>
+                  <Link to="comments">Comments</Link>
+              </button>
           </nav>
 
           {/* A <Switch> looks through its children <Route>s and
@@ -35,8 +40,16 @@ export default function App() {
                   <Posts/>
               </Route>
 
-              <Route path="/posts/:id">
+              <Route path="/posts/:id" exact>
                   <PostsInformation/>
+              </Route>
+
+              <Route path="/comments" exact>
+                  <Comments/>
+              </Route>
+
+              <Route path="/comments/:id" exact>
+                  <DifferentCommentar/>
               </Route>
 
           </Switch>
@@ -48,6 +61,8 @@ export default function App() {
 function Home() {
   return <h2>Home</h2>;
 }
+
+// Добавляю пости
 
 function Posts(){
     let [posts, setPosts] = React.useState([]);
@@ -62,13 +77,15 @@ function Posts(){
        dataFetch()
     },[])
 return (
-    <div>
+    <div className={'posts'}>
         <h2>Posts</h2>
         <ol>
             {posts.map(el => <Link to={`/posts/${el.id}`}><li>{el.title} - {el.id}</li></Link>)}
         </ol>
         </div>);
 }
+
+// Перехід на кожен окремий пост
 
 function PostsInformation(){
     let [post, setPost] = React.useState([]);
@@ -92,7 +109,58 @@ function PostsInformation(){
         <div>
             <h2>Post Information</h2>
             <ol>
-                {post && (<><h3>post.title</h3><p>{post.body}</p></>)}
+                {post && (<><h3>{post.title}</h3><p>{post.body}</p></>)}
             </ol>
         </div>);
+}
+
+// Добавляю комментарі
+
+function Comments () {
+    let [comment, setComments] = React.useState([])
+
+    let myFetchComments = async () => {
+        let response = await fetch('https://jsonplaceholder.typicode.com/comments');
+        let json = await response.json()
+        setComments(json);
+    }
+
+    React.useEffect(() => {
+        myFetchComments()
+    }, [])
+
+    return (
+        <div>
+            <h2>Comments</h2>
+            <ol>
+                {comment.map(el => <Link to={`/comments/${el.id}`}><li>{el.name} - {el.body}</li></Link>)}
+            </ol>
+        </div>
+    )
+}
+
+// Добавляю перехід на кожен окремий коментар
+
+function DifferentCommentar() {
+    let [commentar, setCommentar] = React.useState([]);
+
+    let {id} = useParams();
+
+    let fetchComments = async () => {
+        let response = await fetch(`https://jsonplaceholder.typicode.com/comments/${id}`);
+        let json = await response.json()
+        setCommentar(json);
+    }
+    React.useEffect(()=>{
+        fetchComments();
+    },[]);
+
+    return(
+        <div>
+            <h2>Все про коментар</h2>
+            <ol>
+                {commentar && (<><h3>{commentar.name}</h3><p>{commentar.body}</p></>)}
+            </ol>
+        </div>
+    )
 }

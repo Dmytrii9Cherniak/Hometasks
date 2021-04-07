@@ -1,5 +1,5 @@
 import React from "react";
-
+import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,8 +14,7 @@ from "react-router-dom";
 export default function App() {
   return (
       <Router>
-        <div>
-          <nav>
+        <div className={'header'}>
             <button>
                 <Link to="/">Home</Link>
             </button>
@@ -24,12 +23,24 @@ export default function App() {
             </button>
 
               <button>
-                  <Link to="comments">Comments</Link>
+                  <Link to="/comments">Comments</Link>
               </button>
-          </nav>
 
+              <button>
+                  <Link to="/albums">Albums</Link>
+              </button>
+
+              <button>
+                  <Link to ="/photos">Photos</Link>
+              </button>
+
+              <button>
+                  <Link to="/todos">Todos</Link>
+              </button>
+        </div>
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
+            <div>
           <Switch>
 
             <Route path="/" exact>
@@ -50,6 +61,30 @@ export default function App() {
 
               <Route path="/comments/:id" exact>
                   <DifferentCommentar/>
+              </Route>
+
+              <Route path="/albums" exact>
+                  <Albums/>
+              </Route>
+
+              <Route path="/albums/:id" exact>
+                  <DifferentElementOfAlbums/>
+              </Route>
+
+              <Route path="/photos" exact>
+                  <Photos/>
+              </Route>
+
+              <Route path="/photos/:id" exact>
+                    <DifferentPhotos/>
+              </Route>
+
+              <Route path="/todos" exact>
+                  <Todos/>
+              </Route>
+
+              <Route path='/todos/:id' exact>
+                  <DiifferentTodos/>
               </Route>
 
           </Switch>
@@ -77,7 +112,7 @@ function Posts(){
        dataFetch()
     },[])
 return (
-    <div className={'posts'}>
+    <div>
         <h2>Posts</h2>
         <ol>
             {posts.map(el => <Link to={`/posts/${el.id}`}><li>{el.title} - {el.id}</li></Link>)}
@@ -164,3 +199,148 @@ function DifferentCommentar() {
         </div>
     )
 }
+
+// Добавляю альбоми
+
+function Albums () {
+    let [album, setAlbums] = React.useState([]);
+
+    let {id} = useParams();
+
+    let fetchAlbums = async () => {
+        let response = await fetch('https://jsonplaceholder.typicode.com/albums');
+        let json = await response.json();
+        setAlbums(json);
+    }
+    React.useEffect(()=>{
+        fetchAlbums()
+    },[]);
+    return (
+        <div>
+            <h2>Albums</h2>
+            <ol>
+                {album.map(el => <Link to={`/albums/${el.id}`}><li>{el.title}</li></Link>)}
+            </ol>
+        </div>
+    )
+}
+
+// Добавляю перехід на різні елементи альбомів
+
+function DifferentElementOfAlbums(){
+    let [albumElement, setAlbumElement] = React.useState([]);
+
+    let {id} = useParams();
+
+    let fetchAlbumElement = async () => {
+        let response = await fetch(`https://jsonplaceholder.typicode.com/albums/${id}`);
+        let json = await response.json();
+        setAlbumElement(json);
+    }
+    React.useEffect(()=> {
+        fetchAlbumElement()
+    },[])
+    return (
+        <ol>
+            {albumElement && (<p>{albumElement.title}</p>)}
+        </ol>
+    )
+}
+
+// Добавляю фото
+
+function Photos() {
+    let [photos, setPhotos] = React.useState([]);
+
+    let myFetchPhotos = async () => {
+        let response = await fetch('https://jsonplaceholder.typicode.com/photos');
+        let json = await response.json();
+        setPhotos(json);
+    }
+    React.useEffect(()=>{
+        myFetchPhotos();
+    },[])
+    return (
+        <div>
+        <h2>Фотографії</h2>
+        <ol>
+            {photos.map(el => <Link to={`/photos/${el.id}`}><li>{el.title} - {el.url}</li></Link>)}
+        </ol>
+        </div>
+    );
+}
+
+// Добавляю перехід на окремі фото
+
+function DifferentPhotos(){
+        let [differentphoto, setdifferentphoto] = React.useState([]);
+
+        let {id} = useParams();
+
+        let differentFetchPhoto = async () => {
+            let response = await fetch(`https://jsonplaceholder.typicode.com/albums/${id}`);
+            let json = await response.json()
+            setdifferentphoto(json);
+        }
+
+            React.useEffect(()=>{
+                differentFetchPhoto();
+            },[]);
+
+        return (
+            <div>
+            <h2>Дані про фотографію</h2>
+            <ol>
+                {differentphoto && <p>{differentphoto.title}</p>}
+            </ol>
+            </div>
+        )
+}
+
+// Добавляю то-до
+
+    function Todos(){
+    let [todos, setTodos] = React.useState([]);
+
+    let myTodosComments = async () =>{
+        let response = await fetch('https://jsonplaceholder.typicode.com/todos');
+        let json = await response.json();
+        setTodos(json);
+    }
+    React.useEffect(()=>{
+        myTodosComments();
+    },[]);
+    return (
+        <div>
+            <h2>Тодос</h2>
+            <ol>
+                {todos.map(el => <Link to={`/todos/${el.id}`}><li>{el.title}</li></Link>)}
+            </ol>
+        </div>
+    )
+}
+
+// Добавляю перехід до кожного окремого то-до
+
+    function DiifferentTodos () {
+        let [differentElement, setDifferentElement] = React.useState([]);
+
+        let {id} = useParams();
+
+        let fetchTodos = async () => {
+            let response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
+            let json = await response.json();
+            setDifferentElement(json);
+        }
+        React.useEffect(()=>{
+            fetchTodos();
+        },[]);
+        return(
+            <div>
+                <h2>Все про тодос</h2>
+                <ol>
+                    {differentElement && (<h3>{differentElement.title} - {differentElement.completed}</h3>)}
+                </ol>
+            </div>
+        )
+    }

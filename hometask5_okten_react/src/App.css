@@ -1,3 +1,20 @@
-.posts{
-    border: 1px solid;
+.header{
+    background: red;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+}
+
+button{
+    width: 233px;
+    height: 61px;
+    color: #292929;
+    border-radius: 6px;
+    background-color: #FF9638;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
 }

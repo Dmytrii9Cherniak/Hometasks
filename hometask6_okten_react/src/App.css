@@ -1,0 +1,66 @@
+header{
+    height: 50px;
+    background-color: burlywood;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+a{
+    font-size: 19px;
+    font-weight: bold;
+    margin-right: 11px;
+    text-decoration: none;
+}
+
+.all_todos{
+    flex: 1;
+    margin-right: 12px;
+    link: red;
+}
+
+.input[type=text]:focus {
+   width: 270px;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    margin-left: 15px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+input[type=text]:focus{
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.button{
+    border: 1px solid;
+    background: none;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    color: royalblue;
+    margin-top: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.button{
+    background: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-family: "montserrat", sans-serif;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    min-width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+}
+
+.button:hover{
+    color: #fff;
+}
+
